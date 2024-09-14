@@ -1,0 +1,15 @@
+.d-flex {
+  display: flex;
+}
+
+.all-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.v-center {
+  align-items: center;
+}
+.h-center {
+  justify-content: center;
+}
