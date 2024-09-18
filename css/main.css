@@ -55,6 +55,13 @@ aside {
       display: block;
       color: black;
       text-decoration: none;
+      margin-bottom: 5px;
+      &.active {
+        background-color: #f6f6f6;
+      }
+      &:hover {
+        background-color: #f6f6f6;
+      }
       i {
         margin-right: 10px;
       }
@@ -62,5 +69,54 @@ aside {
   }
 }
 
-body > .content {
+.content {
+  width: 100%;
+  .head {
+    .search {
+      &::before {
+        content: "\f002";
+        position: absolute;
+        font-weight: 900;
+        font-family: var(--fa-style-family-classic);
+        color: var(--grey-color);
+        top: 50%;
+        left: 15px;
+        translate: 0 -50%;
+        font-size: 14px;
+      }
+      input {
+        border-radius: 10px;
+        font-size: 13.5px;
+        border: 1px solid #ccc;
+        padding-left: 30px;
+        margin-left: 5px;
+        width: 160px;
+        transition: 0.3s width;
+        &:focus {
+          width: 200px;
+          outline: none;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+    .icons {
+      > span::before {
+        content: "";
+        position: absolute;
+        background-color: var(--red-color);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+      }
+    }
+  }
 }

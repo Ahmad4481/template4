@@ -1,3 +1,4 @@
+/* Start flex  */
 .d-flex {
   display: flex;
 }
@@ -19,6 +20,11 @@
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 
+.space-b {
+  justify-content: space-between;
+}
+/* End flex  */
+
 .p-r {
   position: relative;
 }
@@ -27,34 +33,37 @@
   text-align: center;
 }
 
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
 
 .fs-14 {
   font-size: 14px;
 }
 
-.p-10 {
-  padding: 10px;
-}
-
-.p-15 {
-  padding: 15px;
-}
-
 .c-black {
   color: black;
 }
-
-.mr-10 {
-  margin-right: 10px;
+/* Start Padding */
+.p-10 {
+  padding: 10px;
 }
+.p-15 {
+  padding: 15px;
+}
+/* End Padding */
+
+
 
 .bg-white {
   background-color: white;
 }
+/* Start Margin */
+.mr-10 {
+  margin-right: 10px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+/* End Margin */
