@@ -20,6 +20,10 @@
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 
+.gap-20 {
+  gap: 20px;
+}
+
 .space-b {
   justify-content: space-between;
 }
@@ -48,6 +52,10 @@
 .p-15 {
   padding: 15px;
 }
+
+.p-20 {
+  padding: 20px;
+}
 /* End Padding */
 
 
@@ -63,7 +71,30 @@
   margin-bottom: 50px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
 .mt-0 {
   margin-top: 0;
 }
+.mb-20 {
+  margin-top: 20px;
+}
 /* End Margin */
+
+/* Start rad */
+.rad-6 {
+  border-radius: 6px;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+
+.rad-half {
+  border-radius: 50%;
+}
+/* End rad */
+
+.w-full {
+  width: 100%;
+}
