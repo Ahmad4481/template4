@@ -1,6 +1,19 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+
 /* Start flex  */
 .d-flex {
   display: flex;
+}
+
+.d-block {
+  display: block;
 }
 
 .all-center {
@@ -37,7 +50,6 @@
   text-align: center;
 }
 
-
 .fs-14 {
   font-size: 14px;
 }
@@ -58,8 +70,6 @@
 }
 /* End Padding */
 
-
-
 .bg-white {
   background-color: white;
 }
@@ -78,7 +88,13 @@
   margin-top: 0;
 }
 .mb-20 {
-  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mr-15 {
+  margin-right: 15px;
 }
 /* End Margin */
 
@@ -97,4 +113,21 @@
 
 .w-full {
   width: 100%;
+}
+
+.btn-shape {
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.c-white {
+  color: white;
+}
+
+.bg-blue {
+  background-color: var(--blue-color);
 }
