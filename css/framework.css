@@ -40,6 +40,10 @@
 .space-b {
   justify-content: space-between;
 }
+
+.f-wrap {
+  flex-wrap: wrap;
+}
 /* End flex  */
 
 .p-r {
@@ -66,7 +70,9 @@
   text-transform: capitalize;
 }
 
-
+.fs-13 {
+  font-size: 13px;
+}
 
 .fs-14 {
   font-size: 14px;
@@ -74,6 +80,10 @@
 
 .fs-15 {
   font-size: 15px;
+}
+
+.fs-25 {
+  font-size: 25px;
 }
 
 .c-black {
@@ -108,6 +118,9 @@
 
 .mt-20 {
   margin-top: 20px;
+}
+.mb-5 {
+  margin-bottom: 5px;
 }
 .mt-0 {
   margin-top: 0;
@@ -163,8 +176,32 @@
   color: white;
 }
 
+
+.c-green {
+  color: var(--green-color);
+}
+
+.c-blue {
+  color: var(--blue-color);
+}
+
+.c-orange {
+  color: var(--orange-color);
+}
+
+.c-red {
+  color: var(--red-color);
+}
+
 .bg-blue {
   background-color: var(--blue-color);
+}
+
+.bg-green {
+  background-color: var(--green-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
 }
 
 .bg-eee {

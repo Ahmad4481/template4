@@ -82,7 +82,7 @@
         <div class="search p-r">
           <input type="search" class="p-10" placeholder="Type A Keyword" name="search">
         </div>
-        <div class="icons d-flex v-c">
+        <div class="icons d-flex v-c h-c d-flex v-c">
           <span class="p-r">
             <i class="fa-regular fa-bell fa-lg"></i>
           </span>
@@ -92,6 +92,7 @@
       <!-- End Head -->
       <h1 class="p-r">Dashborad</h1>
       <div class="warpper d-g2 gap-20">
+        <!-- Start Welcome Widght -->
         <div class="welcome bg-white rad-10">
           <div class="intro d-flex space-b p-20">
             <div>
@@ -118,6 +119,8 @@
           </div>
           <a href="#" class="visit d-block fs-14 p-10 btn-shape c-white bg-blue w-fit">Profile</a>
         </div>
+        <!-- End Welcome Widght -->
+        <!-- Start Quick Draft Widght -->
         <div class="quick-draft p-20 bg-white rad-10">
           <div class="intro">
             <h2 class="mt-0 mb-10">Quick Draft</h2>
@@ -132,40 +135,83 @@
             <input type="submit" value="Save" class="btn-shape bg-blue c-white b-none d-block w-fit">
           </form>
         </div>
+        <!-- End Quick Draft Widgh -->
+        <!-- Start Targets Widght -->
         <div class="targets p-20 bg-white rad-10">
           <h2 class="mb-10 mt-0">Yearly Targets</h2>
-          <p class="mt-0 mb-20">Targets Of The Year</p>
-          <div class="target-row">
-            <div class="icons">
-              <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+          <p class="mt-0 mb-20 c-grey">Targets Of The Year</p>
+          <div class="target-row d-flex blue">
+            <div class="icons d-flex v-c h-c">
+              <i class="fa-solid fa-dollar-sign fa-lg"></i>
             </div>
-            <span class="txt-trans fs-14 c-grey">Money</span>
-            <span class="mb-10 mt-5 fw-bold d-block">20.000$</span>
-            <div class="progress p-r">
-              <span class="bg-blue"></span>
-            </div>
-          </div>
-          <div class="target-row">
-            <div class="icons">
-              <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
-            </div>
-            <span class="txt-trans fs-14 c-grey">Money</span>
-            <span class="mb-10 mt-5 fw-bold d-block">20.000$</span>
-            <div class="progress p-r">
-              <span class="bg-blue"></span>
+            <div>
+              <span class="txt-trans fs-14 c-grey">Money</span>
+              <span class="mb-10 mt-5 fw-bold d-block">20.000$</span>
+              <div class="progress p-r">
+                <span style="width: 80%;">
+                  <span class="rad-6 c-white d-flex v-c h-c ">80%</span>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="target-row">
-            <div class="icons">
-              <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+          <div class="target-row d-flex orange">
+            <div class="icons d-flex v-c h-c">
+              <i class="fa-solid fa-code fa-lg"></i>
             </div>
-            <span class="txt-trans fs-14 c-grey">Money</span>
-            <span class="mb-10 mt-5 fw-bold d-block">20.000$</span>
-            <div class="progress p-r">
-              <span class="bg-blue"></span>
+            <div>
+              <span class="txt-trans fs-14 c-grey">Projects</span>
+              <span class="mb-10 mt-5 fw-bold d-block">24</span>
+              <div class="progress p-r ">
+                <span style="width: 55%;">
+                  <span class="rad-6 c-white d-flex v-c h-c">55%</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="target-row d-flex green">
+            <div class="icons d-flex v-c h-c">
+              <i class="fa-solid fa-user fa-lg"></i>
+            </div>
+            <div>
+              <span class="txt-trans fs-14 c-grey">Team</span>
+              <span class="mb-10 mt-5 fw-bold d-block">12</span>
+              <div class="progress p-r">
+                <span style="width: 75%;">
+                  <span class="rad-6 c-white d-flex v-c h-c">75%</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
+        <!-- End Targets Widght -->
+        <!-- Start Tickets Widght -->
+        <div class="tickets p-20 bg-white rad-10">
+          <h2 class="mt-0 mb-10">Tickets Statistics</h2>
+          <p class="c-grey mb-20 mt-0">Everything About Support Tickets</p>
+          <div class="d-flex f-wrap gap-20 txt-c">
+            <div class="box p-20 rad-10 fs-13">
+              <i class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+              <span class="fw-bold fs-25 d-block mb-5">2500</span>
+              <span class="c-grey">Total</span>
+            </div>
+            <div class="box p-20 rad-10 fs-13">
+              <i class="fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
+              <span class="fw-bold fs-25 d-block mb-5">500</span>
+              <span class="c-grey">Padding</span>
+            </div>
+            <div class="box p-20 rad-10 fs-13">
+              <i class="fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
+              <span class="fw-bold fs-25 d-block mb-5">1900</span>
+              <span class="c-grey">Closed</span>
+            </div>
+            <div class="box p-20 rad-10 fs-13">
+              <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
+              <span class="fw-bold fs-25 d-block mb-5">100</span>
+              <span class="c-grey">Deleted</span>
+            </div>
+          </div>
+        </div>
+        <!-- End Tickets Widght -->
       </div>
     </div>
   </div>
