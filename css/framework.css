@@ -50,6 +50,24 @@
   text-align: center;
 }
 
+@media (max-width:767px) {
+  .txt-c-mobile {
+    text-align: center;
+  }
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+  .gap-20-mobile {
+    gap: 20px;
+  }
+}
+
+.txt-trans {
+  text-transform: capitalize;
+}
+
+
+
 .fs-14 {
   font-size: 14px;
 }
@@ -94,6 +112,9 @@
 .mt-0 {
   margin-top: 0;
 }
+.mt-5 {
+  margin-top: 5px;
+}
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -123,6 +144,10 @@
 
 .w-full {
   width: 100%;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 .btn-shape {
