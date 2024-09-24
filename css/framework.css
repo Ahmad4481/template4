@@ -90,6 +90,9 @@
   color: black;
 }
 /* Start Padding */
+.p-0 {
+  padding: 0;
+}
 .p-10 {
   padding: 10px;
 }
@@ -116,6 +119,9 @@
 .pt-15 {
   padding-top: 15px;
 }
+.pl-15 {
+  padding-left: 15px;
+}
 .pt-20 {
   padding-top: 20px;
 }
@@ -137,6 +143,9 @@
 
 .mt-20 {
   margin-top: 20px;
+}
+.mt-25 {
+  margin-top: 25px;
 }
 .mb-5 {
   margin-bottom: 5px;

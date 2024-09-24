@@ -42,6 +42,23 @@ ul {
 a {
   text-decoration: none;
 }
+
+.orange {
+  --alt-color: rgba(245, 159, 11, 0.2);
+  --color: var(--orange-color);
+}
+.blue {
+  --alt-color: rgba(0, 119, 255, 0.2);
+  --color: var(--blue-color);
+}
+.green {
+  --alt-color: rgba(34, 197, 94, 0.2);
+  --color: var(--green-color);
+}
+.red {
+  --alt-color: rgb(244 67 54 / 0.2);
+  --color: var(--red-color);
+}
 /* End Global Ruls */
 .page {
   background-color: #f1f5f9;
@@ -273,18 +290,6 @@ a {
       .target-row {
         margin-bottom: 20px;
         align-items: center;
-        &.orange {
-          --alt-color: rgba(245, 159, 11, 0.2);
-          --color: var(--orange-color);
-        }
-        &.blue {
-          --alt-color: rgba(0, 119, 255, 0.2);
-          --color: var(--blue-color);
-        }
-        &.green {
-          --alt-color: rgba(34, 197, 94, 0.2);
-          --color: var(--green-color);
-        }
         .icons {
           width: 80px;
           height: 80px;
@@ -364,7 +369,8 @@ a {
     }
     .task-row.done {
       opacity: 0.3;
-      h3,p {
+      h3,
+      p {
         text-decoration: line-through;
       }
     }
@@ -375,5 +381,54 @@ a {
       margin-right: 10px;
     }
     /* End Latest Uploads Widght */
+    /* Start Last Project Widght */
+    .last-project li {
+        &::before {
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: relative;
+          outline: 2px solid var(--blue-color);
+          border: solid white 2px;
+          border-radius: 50%;
+          margin-right: 15px;
+          z-index: 2;
+        }
+        &.done::before {
+          background-color: var(--blue-color);
+        }
+        &.current::before {
+          animation: change-color .8s linear infinite alternate;
+        }
+      }
+      .last-project img {
+        width: 160px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0.1;
+      }
+    /* End Last Project Widght */
+    /* Start Reminders Widght */
+    .reminders {
+      li div {
+        border-left: solid 2px var(--color);
+      }
+      .key {
+        background-color: var(--color);
+        width: 15px;
+        height: 15px;
+      }
+    }
+    /* End Reminders Widght */
+  }
+}
+
+@keyframes change-color {
+  0% {
+    background-color: var(--blue-color);
+  }
+  100% {
+    background-color: white;
   }
 }
