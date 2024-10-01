@@ -39,6 +39,7 @@
 
 .space-b {
   justify-content: space-between;
+  display: flex;
 }
 
 .f-wrap {
@@ -245,5 +246,8 @@
 /* Borders */
 .bb {
   border-bottom: 1px solid #eee;
+}
+.bt {
+  border-top: 1px solid #eee;
 }
 /* Borders */

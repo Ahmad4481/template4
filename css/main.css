@@ -423,7 +423,10 @@ a {
     /* End Reminders Widght */
     /* Start latest post Widght */
     .latest-post {
-      
+      .body {
+        line-height: 1.8;
+        min-height: 140px;
+      }
     }
     /* End latest post Widght */
   }
