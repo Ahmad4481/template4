@@ -130,6 +130,7 @@ a {
   /* End Sidbar */
   .content {
     width: 100%;
+    overflow: hidden;
     .head {
       .search {
         &::before {
@@ -383,31 +384,31 @@ a {
     /* End Latest Uploads Widght */
     /* Start Last Project Widght */
     .last-project li {
-        &::before {
-          content: "";
-          width: 20px;
-          height: 20px;
-          position: relative;
-          outline: 2px solid var(--blue-color);
-          border: solid white 2px;
-          border-radius: 50%;
-          margin-right: 15px;
-          z-index: 2;
-        }
-        &.done::before {
-          background-color: var(--blue-color);
-        }
-        &.current::before {
-          animation: change-color .8s linear infinite alternate;
-        }
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: relative;
+        outline: 2px solid var(--blue-color);
+        border: solid white 2px;
+        border-radius: 50%;
+        margin-right: 15px;
+        z-index: 2;
       }
-      .last-project img {
-        width: 160px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        opacity: 0.1;
+      &.done::before {
+        background-color: var(--blue-color);
       }
+      &.current::before {
+        animation: change-color 0.8s linear infinite alternate;
+      }
+    }
+    .last-project img {
+      width: 160px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0.1;
+    }
     /* End Last Project Widght */
     /* Start Reminders Widght */
     .reminders {
@@ -429,6 +430,85 @@ a {
       }
     }
     /* End latest post Widght */
+    /* Start Social Media Widght */
+    .social-media .box {
+      padding-left: 70px;
+      &.twitter {
+        --box-color: #1da1f2;
+        background-color: rgb(29 161 242 / 20%);
+      }
+      &.facebook {
+        --box-color: #1877f2;
+        background-color: rgb(24 119 242 / 20%);
+      }
+      &.youtube {
+        --box-color: red;
+        background-color: rgb(255 0 0 / 20%);
+      }
+      &.linkedin {
+        background-color: rgba(0, 118, 181, 0.2);
+        --box-color: #0077b5;
+      }
+      i {
+        position: absolute;
+        transition: 0.3s;
+        top: 0;
+        left: 0;
+        background-color: var(--box-color);
+        width: 52px;
+      }
+      span {
+        color: var(--box-color);
+      }
+      a {
+        background-color: var(--box-color);
+      }
+    }
+    /* End Social Media Widght */
+    /* Start Projects Table */
+    .projects .table {
+      overflow-x: auto;
+      table {
+        min-width: 1000px;
+        border-spacing: 0;
+        tr td {
+          padding: 15px;
+        }
+        thead {
+          td {
+            font-weight: bold;
+            background-color: #eee;
+          }
+        }
+        tbody {
+          tr {
+            &:hover td {
+              background-color: #faf7f7;
+            }
+            td {
+              border-left: #eee solid 1px;
+              border-bottom: #eee solid 1px;
+              transition: 0.3s;
+              &:last-child {
+                border-right: solid #eee 1px;
+              }
+              span {
+                font-size: 13px;
+              }
+            }
+            img {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              &:not(:first-child) {
+                margin-left: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* End Projects Table */
   }
 }
 
