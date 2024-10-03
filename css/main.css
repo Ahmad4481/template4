@@ -64,7 +64,7 @@ a {
   background-color: #f1f5f9;
   /* Start Sidbar */
   aside {
-    width: 210px;
+    width: 250px;
     box-shadow: 0 0 10px #ddd;
     @media (max-width: 768px) {
       & {
@@ -511,6 +511,65 @@ a {
     /* End Projects Table */
   }
 }
+
+/* Start Settings Page */
+.warpper {
+  /* Start Settings Box */
+  .toggle-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    + .toggle-switch {
+      border-radius: 16px;
+      background-color: #ccc;
+      height: 32px;
+      width: 78px;
+      transition: 0.3s;
+      position: relative;
+      cursor: pointer;
+      &::before {
+        font-family: var(--fa-style-family-classic);
+        content: "\f00d";
+        font-weight: 900;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        top: 4px;
+        left: 4px;
+        transition: 0.3s;
+      }
+    }
+    &:checked + .toggle-switch {
+      background-color: var(--blue-color);
+      &::before {
+        left: calc(100% - 4px);
+        translate: -100% 0;
+        color: var(--blue-color);
+        content: "\f00c";
+      }
+    }
+  }
+  /* End Settings Box */
+  /* Start Settings Box */
+  section textarea {
+    min-height: 150px;
+    resize: none;
+    border: #ccc solid 1px;
+  }
+  section input:disabled {
+    background-color: #f0f4f8;
+    color: #bbb;
+    cursor: no-drop;
+    width: calc(100% - 80px);
+  }
+  /* End Settings Box */
+}
+/* End Settings Page */
 
 @keyframes change-color {
   0% {

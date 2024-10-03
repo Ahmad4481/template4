@@ -255,10 +255,21 @@
   border: none;
 }
 /* Borders */
+.b {
+  border: solid 1px #eee;
+}
 .bb {
   border-bottom: 1px solid #eee;
 }
 .bt {
   border-top: 1px solid #eee;
 }
+
+.border-ccc {
+  border: #ccc solid 1px;
+}
 /* Borders */
+
+.ol-none {
+  outline: none;
+}
