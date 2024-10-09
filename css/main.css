@@ -515,9 +515,11 @@ a {
 /* Start Settings Page */
 .warpper {
   /* Start Settings Box */
-  .toggle-checkbox {
+  input[type='checkbox'] {
     appearance: none;
     -webkit-appearance: none;
+  }
+  .toggle-checkbox {
     + .toggle-switch {
       border-radius: 16px;
       background-color: #ccc;
@@ -554,8 +556,6 @@ a {
       }
     }
   }
-  /* End Settings Box */
-  /* Start Settings Box */
   section textarea {
     min-height: 150px;
     resize: none;
@@ -566,6 +566,52 @@ a {
     color: #bbb;
     cursor: no-drop;
     width: calc(100% - 80px);
+  }
+  section .button {
+    transition: 0.3s;
+    &:hover {
+      background-color: var(--blue-alt-color);
+    }
+  }
+  .widght-control .control {
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 30px;
+      &::before,&::after {
+        position: absolute;
+        border-radius: 4px;
+        left: 0%;
+        top: 0;
+      }
+      &::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border: 2px solid var(--grey-color);
+      }
+      &::after {
+        font-family: var(--fa-style-family-classic);
+        content: '\f00c';
+        background-color: var(--blue-color);
+        color: white;
+        font-weight: 900;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0) rotate(360deg);
+        transition: .3s;
+      }
+      &:hover::before {
+        border: 2px solid var(--blue-color);
+      }
+    }
+    input:checked+ label::after {
+      transform: scale(1);
+    }
   }
   /* End Settings Box */
 }
