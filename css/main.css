@@ -513,9 +513,10 @@ a {
 }
 
 /* Start Settings Page */
-.warpper {
+.warpper.settings {
   /* Start Settings Box */
-  input[type='checkbox'] {
+  input[type="checkbox"],
+  input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
   }
@@ -573,26 +574,47 @@ a {
       background-color: var(--blue-alt-color);
     }
   }
+  .social-boxes > div {
+    &:focus-within i {
+      color: black;
+    }
+    i {
+      background-color: #f6f6f6;
+      border: 1px solid #ddd;
+      width: 40px;
+      height: 40px;
+      transition: 0.3s;
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+    }
+    input {
+      border: 1px solid #ddd;
+      padding: 1px 2px 1px 10px;
+      background-color: #f6f6f6;
+      border-radius: 0 6px 6px 0;
+    }
+  }
   .widght-control .control {
     label {
       position: relative;
       cursor: pointer;
       padding-left: 30px;
-      &::before,&::after {
+      &::before,
+      &::after {
         position: absolute;
         border-radius: 4px;
         left: 0%;
         top: 0;
       }
       &::before {
-        content: '';
+        content: "";
         width: 14px;
         height: 14px;
         border: 2px solid var(--grey-color);
       }
       &::after {
         font-family: var(--fa-style-family-classic);
-        content: '\f00c';
+        content: "\f00c";
         background-color: var(--blue-color);
         color: white;
         font-weight: 900;
@@ -603,14 +625,65 @@ a {
         justify-content: center;
         align-items: center;
         transform: scale(0) rotate(360deg);
-        transition: .3s;
+        transition: 0.3s;
       }
       &:hover::before {
         border: 2px solid var(--blue-color);
       }
     }
-    input:checked+ label::after {
+    input:checked + label::after {
       transform: scale(1);
+    }
+  }
+  .backup-control {
+    > div > label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 30px;
+      &::before,
+      &::after {
+        position: absolute;
+        border-radius: 50%;
+        left: 0%;
+        top: 0;
+      }
+      &::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--grey-color);
+      }
+      &::after {
+        content: "";
+        background-color: var(--blue-color);
+        width: 12px;
+        height: 12px;
+        transform: scale(0);
+        transition: 0.3s;
+        left: 4.5px;
+        top: 4.5px;
+      }
+    }
+    input:checked + label::after {
+      transform: scale(1);
+    }
+    input:checked + label::before {
+      border: var(--blue-color) 2px solid;
+    }
+    .servers {
+      gap: 5px;
+      @media (max-width:767px) {
+        flex-wrap: wrap;
+        gap: 7.5px;
+      }
+      > .server {
+        border: 2px solid #eee;
+        transition: .3s border;
+      }
+      input:checked + .server {
+        border-color: var(--blue-color);
+        color: var(--blue-color);
+      }
     }
   }
   /* End Settings Box */

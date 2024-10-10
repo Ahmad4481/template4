@@ -91,7 +91,7 @@
       </div>
       <!-- End Head -->
       <h1 class="p-r">Settings</h1>
-      <div class="warpper d-g2 gap-20">
+      <div class="warpper settings d-g2 gap-20">
         <!-- Start Settings Box -->
         <section class="p-20 rad-10 bg-white">
           <h2 class="mb-20 mt-0">Site Control</h2>
@@ -167,6 +167,28 @@
         </section>
         <!-- End Settings Box -->
         <!-- Start Settings Box -->
+        <section class="p-20 bg-white rad-10 social-boxes">
+          <h2 class="mt-0 mb-20">Social Info</h2>
+          <p class="c-grey fs-15 mb-20"></p>
+          <div class="social-box d-flex c-grey mb-15">
+            <i class="fa-brands fa-twitter v-c h-c d-flex rad-"></i>
+            <input type="text" class="w-full b-none fs-13" placeholder="Twitter Username">
+          </div>
+          <div class="social-box d-flex c-grey mb-15">
+            <i class="fa-brands fa-facebook v-c h-c d-flex rad-"></i>
+            <input type="text" class="w-full b-none fs-13" placeholder="Facebook Username">
+          </div>
+          <div class="social-box d-flex c-grey mb-15">
+            <i class="fa-brands fa-linkedin v-c h-c d-flex rad-"></i>
+            <input type="text" class="w-full b-none fs-13" placeholder="Linkedin Username">
+          </div>
+          <div class="social-box d-flex c-grey mb-15">
+            <i class="fa-brands fa-youtube v-c h-c d-flex rad-"></i>
+            <input type="text" class="w-full b-none fs-13" placeholder="Youtube Username">
+          </div>
+        </section>
+        <!-- End Settings Box -->
+        <!-- Start Settings Box -->
         <section class="p-20 bg-white rad-10 widght-control">
           <h2 class="mt-0 mb-20">Widgets Control</h2>
           <p class="mb-20 c-grey">Show/Hide Widgets</p>
@@ -196,6 +218,53 @@
               <label for="six">Top Search Items</label>
             </div>
           </form>
+        </section>
+        <!-- End Settings Box -->
+        <!-- Start Settings Box -->
+        <section class="backup-control bg-white rad-10 p-20">
+          <h2 class="mb-20 mt-0">Backup Manager</h2>
+          <p class="fs-15 c-grey mb-20">Control Backup Time And Location</p>
+          <div class="date d-flex v-c mb-15">
+            <input type="radio" name="time" id="daily" checked>
+            <label for="daily">
+              Daily
+            </label>
+          </div>
+          <div class="date d-flex v-c mb-15">
+            <input type="radio" name="time" id="weekly">
+            <label for="weekly">
+              Weekly
+            </label>
+          </div>
+          <div class="date d-flex v-c mb-15">
+            <input type="radio" name="time" id="monthly">
+            <label for="monthly">
+              Monthly
+            </label>
+          </div>
+          <div class="servers d-flex v-c bt p-20" for="megaman">
+            <input type="radio" name="server" id="server-one" checked>
+            <div class="rad-10 p-15 server w-full">
+              <label for="server-one" class="txt-c">
+                <i class="fa-solid fa-server d-block mb-10"></i>
+                <span class="d-block">Megaman</span>
+              </label>
+            </div>
+            <input type="radio" name="server" id="server-two">
+            <div class="rad-10 p-15 server w-full">
+              <label for="server-two" class="txt-c">
+                <i class="fa-solid fa-server d-block mb-10"></i>
+                <span class="d-block">Zero</span>
+              </label>
+            </div>
+            <input type="radio" name="server" id="server-three">
+            <div class="rad-10 p-15 server w-full">
+              <label for="server-three" class="txt-c">
+                <i class="fa-solid fa-server d-block mb-10"></i>
+                <span class="d-block">Sigma</span>
+              </label>
+            </div>
+          </div>
         </section>
         <!-- End Settings Box -->
       </div>
