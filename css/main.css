@@ -66,7 +66,7 @@ a {
   aside {
     width: 250px;
     box-shadow: 0 0 10px #ddd;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       & {
         width: 52px;
         padding: 10px !important;
@@ -82,7 +82,7 @@ a {
         left: 50%;
         translate: -50% 0;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         &::after,
         &::before {
           display: none;
@@ -119,7 +119,7 @@ a {
         span {
           margin-left: 10px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           span {
             display: none;
           }
@@ -513,49 +513,49 @@ a {
 }
 
 /* Start Settings Page */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.toggle-checkbox {
+  + .toggle-switch {
+    border-radius: 16px;
+    background-color: #ccc;
+    height: 32px;
+    width: 78px;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      font-family: var(--fa-style-family-classic);
+      content: "\f00d";
+      font-weight: 900;
+      position: absolute;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #aaa;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      top: 4px;
+      left: 4px;
+      transition: 0.3s;
+    }
+  }
+  &:checked + .toggle-switch {
+    background-color: var(--blue-color);
+    &::before {
+      left: calc(100% - 4px);
+      translate: -100% 0;
+      color: var(--blue-color);
+      content: "\f00c";
+    }
+  }
 .warpper.settings {
   /* Start Settings Box */
-  input[type="checkbox"],
-  input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .toggle-checkbox {
-    + .toggle-switch {
-      border-radius: 16px;
-      background-color: #ccc;
-      height: 32px;
-      width: 78px;
-      transition: 0.3s;
-      position: relative;
-      cursor: pointer;
-      &::before {
-        font-family: var(--fa-style-family-classic);
-        content: "\f00d";
-        font-weight: 900;
-        position: absolute;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #aaa;
-        border-radius: 50%;
-        height: 24px;
-        width: 24px;
-        top: 4px;
-        left: 4px;
-        transition: 0.3s;
-      }
-    }
-    &:checked + .toggle-switch {
-      background-color: var(--blue-color);
-      &::before {
-        left: calc(100% - 4px);
-        translate: -100% 0;
-        color: var(--blue-color);
-        content: "\f00c";
-      }
-    }
   }
   section textarea {
     min-height: 150px;
@@ -689,6 +689,58 @@ a {
   /* End Settings Box */
 }
 /* End Settings Page */
+/* Start Profile Page */
+.profile-page {
+  .toggle-switch {
+    width: 78px;
+    height: 20px;
+    &::before {
+      width: 12px;
+      height: 12px;
+      font-size: 8px;
+    }
+  }
+  .avatar {
+    width: 300px;
+    @media (min-width:768px) {
+      border-right: 1px solid #eee;
+    }
+    img {
+      width: 120px;
+    }
+    .level {
+      width: 70%;
+      height: 6px;
+      margin: 0 auto;
+      span {
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  .info {
+    .box {
+      flex-wrap: wrap;
+      transition: .3s;
+      &:hover {
+        background-color: #ddd;
+      }
+      >div {
+        min-width: 250px;
+        padding: 10px 0 0;
+      }
+      h4 {
+        font-weight: normal;
+      }
+
+    }
+  }
+}
+/* End Profile Page */
+
 
 @keyframes change-color {
   0% {
