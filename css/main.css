@@ -554,9 +554,9 @@ input[type="radio"] {
       content: "\f00c";
     }
   }
+}
+/* Start Settings Box */
 .warpper.settings {
-  /* Start Settings Box */
-  }
   section textarea {
     min-height: 150px;
     resize: none;
@@ -672,13 +672,13 @@ input[type="radio"] {
     }
     .servers {
       gap: 5px;
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         flex-wrap: wrap;
         gap: 7.5px;
       }
       > .server {
         border: 2px solid #eee;
-        transition: .3s border;
+        transition: 0.3s border;
       }
       input:checked + .server {
         border-color: var(--blue-color);
@@ -686,11 +686,12 @@ input[type="radio"] {
       }
     }
   }
-  /* End Settings Box */
 }
-/* End Settings Page */
+
+/* End Settings Box */
 /* Start Profile Page */
 .profile-page {
+  margin: 20px;
   .toggle-switch {
     width: 78px;
     height: 20px;
@@ -702,7 +703,7 @@ input[type="radio"] {
   }
   .avatar {
     width: 300px;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       border-right: 1px solid #eee;
     }
     img {
@@ -724,23 +725,62 @@ input[type="radio"] {
   .info {
     .box {
       flex-wrap: wrap;
-      transition: .3s;
+      transition: 0.3s;
       &:hover {
         background-color: #ddd;
       }
-      >div {
+      > div {
         min-width: 250px;
         padding: 10px 0 0;
       }
+      div label div {
+        margin: auto;
+      }
       h4 {
         font-weight: normal;
+        font-size: 15px;
       }
-
+    }
+  }
+  .other-data div:first-child {
+    flex: 1;
+    li {
+      @media (min-width: 767px) {
+        & {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .other-data div:last-child {
+    flex: 2;
+    .activety {
+      border-bottom: solid 1px #eee;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      img {
+        @media (max-width: 767px) {
+          &{
+            margin: 0 auto 15px;
+          }
+        }
+        width: 64px;
+        height: 64px;
+        margin-right: 10px;
+      }
+      .date {
+        @media (max-width:767px) {
+          & {
+            text-align: center !important;
+            margin-top: 10px;
+          }
+        }
+        text-align: right;
+      }
     }
   }
 }
 /* End Profile Page */
-
 
 @keyframes change-color {
   0% {

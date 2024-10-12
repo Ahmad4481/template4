@@ -92,7 +92,7 @@
       <!-- End Head -->
       <h1 class="p-r">Profile</h1>
       <div class="profile-page">
-        <section class="bg-white rad-10 d-flex v-c m-20">
+        <section class="bg-white rad-10 d-flex v-c flex-col-mobile">
           <div class="avatar txt-c p-20">
             <img class="rad-half" src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/imgs/avatar.png"
               alt="">
@@ -110,7 +110,7 @@
             </div>
             <p class="c-grey mt-10 mb-0">550 Rating</p>
           </div>
-          <div class="info">
+          <div class="info txt-c-mobile">
             <div class="box d-flex v-c p-20">
               <h4 class="w-full c-grey m-0">General Information</h4>
               <div class="fs-14">
@@ -122,10 +122,12 @@
               <div class="fs-14">
                 <span class="c-grey">Country</span>:Egypt
               </div>
-              <label>
-                <input class="toggle-checkbox" type="checkbox" checked>
-                <div class="toggle-switch"></div>
-              </label>
+              <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
             </div>
             <div class="box d-flex v-c p-20">
               <h4 class="w-full c-grey m-0">Personal Information</h4>
@@ -138,10 +140,12 @@
               <div class="fs-14">
                 <span class="c-grey">Date Of Birth: </span>25/10/1982
               </div>
-              <label>
-                <input class="toggle-checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-              </label>
+              <div class="fs-14">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox">
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
             </div>
             <div class="box d-flex v-c p-20">
               <h4 class="w-full c-grey m-0">Job Information</h4>
@@ -154,10 +158,12 @@
               <div class="fs-14">
                 <span class="c-grey">Programming Language: </span>15+
               </div>
-              <label>
-                <input class="toggle-checkbox" type="checkbox" checked>
-                <div class="toggle-switch"></div>
-              </label>
+              <div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
             </div>
             <div class="box d-flex v-c p-20">
               <h4 class="w-full c-grey m-0">Billing Information</h4>
@@ -170,10 +176,98 @@
               <div class="fs-14">
                 <span class="c-grey">Subscription: </span>:Monthly
               </div>
-              <label>
-                <input class="toggle-checkbox" type="checkbox">
-                <div class="toggle-switch"></div>
-              </label>
+              <div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox">
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="other-data d-flex gap-20 mt-20 flex-col-mobile">
+          <div class="bg-white rad-10 p-20">
+            <h2 class="mt-0 mb-10">My Skills</h2>
+            <p class="fs-15 c-grey mb-20 mt-0">Complete Skills List</p>
+            <ul class="p-0">
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">HTML</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Pu</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">HTML</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">CSS</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">SASS</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Stylus</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">JavaScript</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">TypeScript</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Vuejs</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Reactjs</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Jest</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Jasmine</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">PHP</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Laravel</span>
+              </li>
+              <li class="bb pt-15 pb-15 txt-c-mobile">
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Python</span>
+                <span class="bg-eee btn-shape fs-14 d-ib mr-5">Django</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white p-20 rad-10 v-c">
+            <h2 class="mt-0 mb-10">Latest Activities</h2>
+            <p class="c-grey fs-15 mt-0 mb-20">Latest Activities Done By The User</p>
+            <div class="activety flex-col-mobile txt-c-mobile d-flex">
+              <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/imgs/activity-01.png" alt="">
+              <div class="info">
+                <span class="mb-10 d-block">Store</span>
+                <span class="c-grey">Bought The Mastering Python Course</span>
+              </div>
+              <div class="date">
+                <span class="mb-10 d-block">18:10</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div>
+            <div class="activety flex-col-mobile txt-c-mobile d-flex">
+              <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/imgs/activity-02.png" alt="">
+              <div class="info">
+                <span class="mb-10 d-block">Academ</span>
+                <span class="c-grey">Got The PHP Certificate</span>
+              </div>
+              <div class="date">
+                <span class="mb-10 d-block">16:15</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div>
+            <div class="activety flex-col-mobile txt-c-mobile d-flex">
+              <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/imgs/activity-03.png" alt="">
+              <div class="info">
+                <span class="mb-10 d-block">Badges</span>
+                <span class="c-grey">Unlocked The 10 Skills Badge</span>
+              </div>
+              <div class="date">
+                <span class="mb-10 d-block">18:05</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
+            </div>
+            <div class="activety flex-col-mobile txt-c-mobile d-flex">
+              <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/imgs/activity-01.png" alt="">
+              <div class="info">
+                <span class="mb-10 d-block">Store</span>
+                <span class="c-grey">Bought The TypeScript Course</span>
+              </div>
+              <div class="date">
+                <span class="mb-10 d-block">12:05</span>
+                <span class="c-grey">Yesterday</span>
+              </div>
             </div>
           </div>
         </section>

@@ -16,6 +16,10 @@
   display: block;
 }
 
+.d-ib {
+  display: inline-block;
+}
+
 .all-center {
   justify-content: center;
   align-items: center;
@@ -57,7 +61,7 @@
 
 @media (max-width: 767px) {
   .txt-c-mobile {
-    text-align: center;
+    text-align: center !important;
   }
   .flex-col-mobile {
     flex-direction: column;
@@ -137,6 +141,9 @@
 }
 .m-20 {
   margin: 20px;
+}
+.mr-5 {
+  margin-right: 5px;
 }
 .mr-10 {
   margin-right: 10px;
