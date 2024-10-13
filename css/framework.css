@@ -208,6 +208,9 @@
 .fw-bold {
   font-weight: bold;
 }
+.fw-normal {
+  font-weight: normal;
+}
 
 .btn-shape {
   border-radius: 6px;
