@@ -200,6 +200,9 @@ a {
         bottom: -10px;
       }
     }
+    > h1+div >section,h1+div>div {
+      box-shadow: 0 0 10px rgb(0 0 0 / 5%);     
+    }
     .warpper {
       margin: 0 20px;
       @media (max-width: 767px) {
@@ -208,9 +211,6 @@ a {
           margin: 0 10px;
           gap: 10px;
         }
-      }
-      > section {
-        box-shadow: 0 0 10px rgb(0 0 0 / 5%);
       }
       /* Start welcome Widght */
       .welcome {
@@ -830,6 +830,30 @@ input[type="radio"] {
   }
 }
 /* End Projects Page */
+/* Start Courses Page */
+.courses-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  .cover {
+    max-width: 100%;
+  }
+  .instructor {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: solid 2px white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .title {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: -13px;
+  }
+}
+/* End Courses Page */
 
 @keyframes change-color {
   0% {
