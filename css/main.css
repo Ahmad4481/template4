@@ -68,11 +68,15 @@ a {
     box-shadow: 0 0 10px #ddd;
     @media (max-width: 767px) {
       & {
-        width: 52px;
+        width: 60px;
         padding: 10px !important;
       }
     }
+    >div {
+      position: fixed;
+    }
     h3 {
+      width: 168px;
       &::after,
       &::before {
         content: "";
@@ -90,6 +94,7 @@ a {
         & {
           font-size: 13px;
           margin: 0 0 15px !important;
+          width: 37.5px;
         }
       }
       &::before {
