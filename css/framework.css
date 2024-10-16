@@ -15,6 +15,9 @@
 .d-block {
   display: block;
 }
+.d-grid {
+  display: grid;
+}
 
 .d-ib {
   display: inline-block;
@@ -53,6 +56,9 @@
 
 .p-r {
   position: relative;
+}
+.p-absolute {
+  position: absolute;
 }
 
 .txt-c {
@@ -119,6 +125,9 @@
 
 .pb-20 {
   padding-bottom: 20px;
+}
+.pt-10 {
+  padding-top: 10px;
 }
 
 .pt-15 {
@@ -283,6 +292,9 @@
 
 .border-ccc {
   border: #ccc solid 1px;
+}
+.border-eee {
+  border: #eee solid 1px;
 }
 /* Borders */
 

@@ -200,13 +200,15 @@ a {
         bottom: -10px;
       }
     }
-    > h1+div >section,h1+div>div {
-      box-shadow: 0 0 10px rgb(0 0 0 / 5%);     
+    > h1 + div > section,
+    h1 + div > div {
+      box-shadow: 0 0 10px rgb(0 0 0 / 5%);
     }
     .warpper {
       margin: 0 20px;
       @media (max-width: 767px) {
-        & {
+        &,
+        .courses-page {
           grid-template-columns: minmax(200px, 1fr);
           margin: 0 10px;
           gap: 10px;
@@ -783,9 +785,21 @@ input[type="radio"] {
 /* End Profile Page */
 /* Start Projects Page */
 .projects-page {
+  margin: 20px;
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: minmax(200px, 1fr);
+      margin: 20px 10px;
+      gap: 10px;
+    }
+  }
   .project {
-    margin: 20px;
     position: relative;
+    > span:first-child {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
     .head {
       .images img {
         width: 40px;
@@ -798,16 +812,18 @@ input[type="radio"] {
           z-index: 2;
         }
       }
-      span {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
     }
     .body {
       justify-content: flex-end;
       padding: 20px 0;
       margin: 20px 0;
+      @media (max-width: 767px) {
+        & {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
       span {
         margin-left: 5px;
         padding: 3px 8px;
@@ -815,12 +831,18 @@ input[type="radio"] {
       }
     }
     .foot {
-      >div {
+      @media (max-width: 767px) {
+        & {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+      > div {
         height: 8px;
         width: 280px;
         border-radius: 6px;
         position: relative;
-        >div {
+        > div {
           position: absolute;
           height: 100%;
           border-radius: 6px;
@@ -833,7 +855,14 @@ input[type="radio"] {
 /* Start Courses Page */
 .courses-page {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: minmax(200px, 1fr);
+      margin: 0 10px;
+      gap: 10px;
+    }
+  }
   .cover {
     max-width: 100%;
   }
@@ -854,6 +883,153 @@ input[type="radio"] {
   }
 }
 /* End Courses Page */
+/* Start Friends Page */
+.friends-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: minmax(200px, 1fr);
+      margin: 0 10px;
+      gap: 10px;
+    }
+  }
+  > div {
+    .content {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      i {
+        background-color: #eee;
+        color: #666;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 13px;
+        transition: 0.3s;
+        &:hover {
+          background-color: var(--blue-color);
+          color: white;
+        }
+      }
+    }
+    .txt {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+    .icons > span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 40px;
+      translate: 0 -50%;
+      opacity: 0.2;
+    }
+  }
+}
+/* End Friends Page */
+/* Start Files Page */
+.files-page {
+  display: flex;
+  align-items: flex-start;
+  @media (max-width:767px) {
+    & {
+      flex-direction: column-reverse;
+      align-items: normal;
+    }
+  }
+  .files-content {
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .file {
+      img {
+        width: 64px;
+        height: 64px;
+        margin: 15px;
+      }
+    }
+  }
+  .files-stats {
+    min-width: 240px;
+    > div {
+      i {
+        background-color: var(--alt-color);
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      .size {
+        margin-left: auto;
+      }
+    }
+    a {
+      padding: 10px 15px;
+      margin: 15px auto 0;
+    }
+  }
+}
+/* End Files Page */
+/* Start Plans Page */
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: minmax(250px, 1fr);
+      margin: 0 10px;
+      gap: 10px;
+    }}
+  .plan {
+    .price {
+      background-color: var(--color);
+      border: 3px solid white;
+      outline: 3px solid var(--color);
+      div {
+        font-size: 40px;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        span {
+          font-size: 25px;
+          position: absolute;
+          top: 0;
+          left: -20px;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      li {
+        padding: 15px 0;
+        border-top: solid 1px #eee;
+        border-bottom: solid 1px #eee;
+        display: flex;
+        font-size: 15px;
+        i:first-child {
+          font-size: 18px;
+          margin-right: 5px;
+          &.yes {
+            color: var(--green-color);
+          }
+          &.no {
+            color: var(--red-color);
+          }
+        }
+        i:last-child {
+          margin-left: auto;
+          color: var(--grey-color);
+          cursor: pointer;
+        }
+      }
+    }
+    a {
+      background-color: var(--color);
+      display: block;
+      width: fit-content;
+    }
+  }
+}
+/* End Plans Page */
 
 @keyframes change-color {
   0% {
