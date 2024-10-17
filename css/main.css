@@ -72,7 +72,7 @@ a {
         padding: 10px !important;
       }
     }
-    >div {
+    > div {
       position: fixed;
     }
     h3 {
@@ -684,8 +684,12 @@ input[type="radio"] {
         gap: 7.5px;
       }
       > .server {
+        cursor: pointer;
         border: 2px solid #eee;
         transition: 0.3s border;
+        label {
+          cursor: pointer;
+        }
       }
       input:checked + .server {
         border-color: var(--blue-color);
@@ -806,15 +810,20 @@ input[type="radio"] {
       right: 10px;
     }
     .head {
-      .images img {
-        width: 40px;
-        height: 40px;
-        border: solid 2px white;
-        border-radius: 50%;
-        margin-right: -20px;
-        position: relative;
-        &:hover {
-          z-index: 2;
+      .images {
+        min-height: 80px;
+        display: flex;
+        align-items: flex-end;
+        img {
+          width: 40px;
+          height: 40px;
+          border: solid 2px white;
+          border-radius: 50%;
+          margin-right: -20px;
+          position: relative;
+          &:hover {
+            z-index: 2;
+          }
         }
       }
     }
@@ -910,6 +919,7 @@ input[type="radio"] {
         border-radius: 50%;
         font-size: 13px;
         transition: 0.3s;
+        cursor: pointer;
         &:hover {
           background-color: var(--blue-color);
           color: white;
@@ -938,7 +948,7 @@ input[type="radio"] {
 .files-page {
   display: flex;
   align-items: flex-start;
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     & {
       flex-direction: column-reverse;
       align-items: normal;
@@ -948,10 +958,14 @@ input[type="radio"] {
     flex: 1;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     .file {
+      &:hover img {
+        transform: rotate(5deg);
+      }
       img {
         width: 64px;
         height: 64px;
         margin: 15px;
+        transition: 0.3s;
       }
     }
   }
@@ -971,6 +985,14 @@ input[type="radio"] {
     a {
       padding: 10px 15px;
       margin: 15px auto 0;
+      font-size: 13px;
+      transition: 0.3s;
+      &:hover {
+        background-color: var(--blue-alt-color);
+        i {
+          animation: go-up 0.35s infinite alternate;
+        }
+      }
     }
   }
 }
@@ -983,7 +1005,8 @@ input[type="radio"] {
       grid-template-columns: minmax(250px, 1fr);
       margin: 0 10px;
       gap: 10px;
-    }}
+    }
+  }
   .plan {
     .price {
       background-color: var(--color);
@@ -1042,5 +1065,14 @@ input[type="radio"] {
   }
   100% {
     background-color: white;
+  }
+}
+
+@keyframes go-up {
+  form {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -5px;
   }
 }
